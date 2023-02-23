@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import pandas_datareader as data 
 import tensorflow.compat.v2 as tf
-
+import yfinance as yf
 
 from keras.models import load_model
 import streamlit as st
@@ -15,7 +15,7 @@ end= '2019-12-05'
 st.title('Stock Price Prediction')
 
 user_input= st.text_input('Enter Stock Ticker', 'SBIN.NS')
-df= data.DataReader('AAPL', 'yahoo', start, end)
+df= yf.Ticker(user_input, start, end)
 
 # Describing Data
 st.subheader('Data from 2010 - 2019')
