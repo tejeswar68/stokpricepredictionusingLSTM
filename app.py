@@ -17,6 +17,18 @@ st.title('Stock Price Prediction')
 user_input= st.text_input('Enter Stock Ticker', 'SBIN.NS')
 df= yf.download(user_input, start ,end , prepost = True,  progress=False)
 
+#list of stock tickers
+st.subheader('YAHOO STOCK TICKERS OF SOME TOP COMPANIES! ')
+
+st.json({'Apple Inc.':'AAPL','Microsoft Corporation':'MSFT','Amazon.com, Inc.':'AMZN'})
+
+# Alphabet Inc. (Google) - GOOGL
+# Facebook, Inc. - FB
+# Berkshire Hathaway Inc. - BRK-A
+# Johnson & Johnson - JNJ
+# Visa Inc. - V
+# Procter & Gamble Co. - PG
+# JPMorgan Chase & Co. - JPM
 
 # Describing Data
 st.subheader('Data from 2015 - 2022')
