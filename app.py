@@ -6,7 +6,7 @@ import pandas_datareader as data
 import tensorflow.compat.v2 as tf
 
 
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 import streamlit as st
 
 start= '2010-01-01'
