@@ -15,7 +15,7 @@ end= '2019-12-05'
 st.title('Stock Price Prediction')
 
 user_input= st.text_input('Enter Stock Ticker', 'SBIN.NS')
-df= data.DataReader(user_input, 'yahoo', start, end)
+df= data.DataReader('AAPL', 'yahoo', start, end)
 
 # Describing Data
 st.subheader('Data from 2010 - 2019')
