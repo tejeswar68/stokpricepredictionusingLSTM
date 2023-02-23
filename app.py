@@ -9,13 +9,14 @@ import yfinance as yf
 from keras.models import load_model
 import streamlit as st
 
-start= '2010-01-01'
-end= '2019-12-05'
+start= '2015-01-01'
+end= '2022-12-05'
 
 st.title('Stock Price Prediction')
 
 user_input= st.text_input('Enter Stock Ticker', 'SBIN.NS')
-df= yf.Ticker(user_input, start, end)
+df= yf.download(user_input, start ,end , prepost = True,  progress=False)
+
 
 # Describing Data
 st.subheader('Data from 2010 - 2019')
