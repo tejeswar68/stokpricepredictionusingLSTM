@@ -119,7 +119,7 @@ plt.legend()
 st.pyplot(fig2)
 
 
-st.write("<h1 style='text-align: center;'>Project Founders:</h1>", unsafe_allow_html=True)
+st.write("<h1 style='text-align: center;'>AUTHORS</h1>", unsafe_allow_html=True)
 
 
 teja = Image.open("profilePic/teja.jpg")
