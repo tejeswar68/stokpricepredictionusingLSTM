@@ -1,11 +1,11 @@
 
-import numpy as np 
-import pandas as pd 
-import matplotlib.pyplot as plt 
-import pandas_datareader as data 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import pandas_datareader as data
 import tensorflow.compat.v2 as tf
 import yfinance as yf
-
+from PIL import Image
 from keras.models import load_model
 import streamlit as st
 
@@ -117,3 +117,20 @@ plt.xlabel('Timeline')
 plt.ylabel('Price')
 plt.legend()
 st.pyplot(fig2)
+
+
+st.write("<h1 style='text-align: center;'>Project Founders:</h1>", unsafe_allow_html=True)
+
+
+teja = Image.open("profilePic/teja.jpg")
+saket = Image.open("profilePic/saket.jpg")
+pavan= Image.open("profilePic/pavan.jpg")
+
+# Display images in a row
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.image(teja, caption="Tejeswara Murthy Palwadi", use_column_width=True)
+with col2:
+    st.image(saket, caption="Palarapu Saket", use_column_width=True)
+with col3:
+    st.image(pavan, caption="Guda Pavaneeshwar Reddy", use_column_width=True)
