@@ -19,7 +19,7 @@ df= yf.download(user_input, start ,end , prepost = True,  progress=False)
 
 
 # Describing Data
-st.subheader('Data from 2010 - 2019')
+st.subheader('Data from 2015 - 2022')
 st.write(df.describe())
 
 # Visualization
